@@ -29,3 +29,27 @@ if (averageScoreTeamJohn > averageScoreTeamMike && averageScoreTeamJohn > averag
 } else {
     console.log('Teams have the same average: ' + averageScoreTeamJohn + ' points!');
 }
+
+// CODING CHALLENGE 3 
+
+function tipCalculator (bill) {
+    
+// calculating tip 
+    var percentageOfTip;
+    var tip;
+
+    if(bill < 50) {
+        percentageOfTip = 0.2; 
+    } else if (bill >= 50 && bill < 200) {
+        percentageOfTip = 0.15; 
+    } else {
+        percentageOfTip = 0.1; 
+    }
+    return percentageOfTip * bill; 
+}
+
+var bills = [124, 48, 268]; 
+var tips = [tipCalculator(bills[0]), tipCalculator(bills[1]), tipCalculator(bills[2])];
+var finalBills = [bills[0]+ tips[0], bills[1]+ tips[1], bills[2]+ tips[2]];
+
+console.log( tips, finalBills);
