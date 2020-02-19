@@ -53,3 +53,39 @@ var tips = [tipCalculator(bills[0]), tipCalculator(bills[1]), tipCalculator(bill
 var finalBills = [bills[0]+ tips[0], bills[1]+ tips[1], bills[2]+ tips[2]];
 
 console.log( tips, finalBills);
+
+
+// CODING CHALLENGE 4 
+
+
+
+var mark = {
+    fullName: 'Mark Smith',
+    mass: 80,
+    height: 1.8,
+    calcBMI: function() {
+        this.BMI = this.mass / (this.height * this.height);
+    }
+};
+mark.calcBMI();
+console.log(mark);
+
+var john = {
+    fullName: 'John Smith',
+    mass: 80,
+    height: 1.8,
+    calcBMI: function() {
+        this.BMI = this.mass / (this.height * this.height);
+    }
+};
+
+john.calcBMI();
+console.log(john);
+
+if (mark.BMI > john.BMI) {     // mark.BMI  can be replace by fucntion call when the function calcBMI will have inside return this.BMI 
+    console.log(mark.fullName + ' has higher BMI than ' + john.fullName);
+} else if (john.BMI > mark.BMI) {
+    console.log(john.fullName + ' has higher BMI than ' + mark.fullName);
+} else {
+    console.log(mark.fullName + ' and ' + john.fullName + ' have the same BMI');
+}
