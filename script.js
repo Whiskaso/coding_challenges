@@ -58,7 +58,6 @@ console.log( tips, finalBills);
 // CODING CHALLENGE 4 
 
 
-
 var mark = {
     fullName: 'Mark Smith',
     mass: 80,
